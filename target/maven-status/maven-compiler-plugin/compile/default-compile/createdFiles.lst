@@ -1,0 +1,6 @@
+io\github\ytrap\fightbar\events\PlayerJoinListener.class
+io\github\ytrap\fightbar\commands\FightBarCommand.class
+io\github\ytrap\fightbar\events\EntityDamageByEntityListener.class
+io\github\ytrap\fightbar\utils\Utils.class
+io\github\ytrap\fightbar\Main.class
+io\github\ytrap\fightbar\utils\UpdateChecker.class

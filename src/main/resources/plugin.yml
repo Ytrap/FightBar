@@ -1,0 +1,11 @@
+name: 'FightBar'
+version: '3.0.1'
+author: 'Ytrap'
+api-version: '1.19'
+main: io.github.ytrap.fightbar.Main
+description: 'An amazing plugin that will make your fights more interesting'
+
+commands:
+  fightbar:
+    description: 'Manage the FightBar plugin'
+    permission: fightbar.manage

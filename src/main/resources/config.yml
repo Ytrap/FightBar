@@ -1,0 +1,33 @@
+# Welcome into the configuration file of the FightBar plugin !
+
+# Config version : 1
+
+# Here is the message in the action bar
+pvpbarMessage: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUBLE_DAMAGE%%CRIT%&1⚔&r)"
+
+# The list of placeholder:
+#%DAMAGER_NAME% : The attacker's name
+#%TARGET_NAME% : The target's name
+
+#%INT_DAMAGE% : Damage done format to int (Ex : 5)
+#%DOUBLE_DAMAGE% : Damage done format to double (Ex : 5.45)
+
+#%INT_HEALTH% : Health after hit of the target format to int (Ex : 14)
+#%DOUBLE_HEALTH% : Health after hit of the target format to double (Ex : 14.55)
+
+#%INT_MAX_HEALTH% : Max health of the target format to int (Ex : 20)
+#%DOUBLE_MAX_HEALTH% : Max health of the target format to double (Ex : 20.00)
+
+#%CRIT% : Critical hit if done
+
+# If you want to implement the critical placeholder, you can change the symbole here
+critSymbole: "&r*"
+
+# ALL = all mobs and players, MOBS = all mobs, PLAYERS = all players
+enableOn: ALL
+
+disabledWorlds:
+  - worldToDisable
+
+disabledEntities:
+#  - Skeleton
