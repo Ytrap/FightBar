@@ -5,6 +5,7 @@ import io.github.ytrap.fightbar.utils.Utils;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -86,10 +87,12 @@ public class EntityDamageByEntityListener implements Listener {
                 doubleHealth = 0.0;
             }
 
-            double distance = Math.sqrt(Math.pow((target.getLocation().getX()-damager.getLocation().getX()), 2.0) + Math.pow((target.getLocation().getY()-damager.getLocation().getY()), 2.0) + Math.pow((target.getLocation().getZ()-damager.getLocation().getZ()), 2.0));
-            damager.sendMessage(String.valueOf(Math.round(distance*100.0)/100.0) + "m");
-            damager.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Utils.chat(plugin.getConfig().getString("pvpbarMessage").replaceAll("%DAMAGER_NAME%", damagerName).replaceAll("%TARGET_NAME%", targetName).replaceAll("%INT_DAMAGE%", String.valueOf(intDamage)).replaceAll("%DOUBLE_DAMAGE%", String.format("%.2f", doubleDamage)).replaceAll("%INT_MAX_HEALTH%", String.valueOf(intMaxHealth)).replaceAll("%DOUBLE_MAX_HEALTH%", String.format("%.2f", doubleMaxHealth)).replaceAll("%INT_HEALTH%", String.valueOf(intHealth)).replaceAll("%DOUBLE_HEALTH%", String.format("%.2f", doubleHealth)).replaceAll("%CRIT%", crit))));
-
+            if (damager.getInventory().getItemInMainHand().getType() == Material.BOW || damager.getInventory().getItemInMainHand().getType() == Material.CROSSBOW) {
+                double distance = Math.sqrt(Math.pow((target.getLocation().getX()-damager.getLocation().getX()), 2.0) + Math.pow((target.getLocation().getY()-damager.getLocation().getY()), 2.0) + Math.pow((target.getLocation().getZ()-damager.getLocation().getZ()), 2.0));
+                damager.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Utils.chat(plugin.getConfig().getString("pvpbarMessageProjectile").replaceAll("%DAMAGER_NAME%", damagerName).replaceAll("%TARGET_NAME%", targetName).replaceAll("%INT_DAMAGE%", String.valueOf(intDamage)).replaceAll("%DOUBLE_DAMAGE%", String.format("%.2f", doubleDamage)).replaceAll("%INT_MAX_HEALTH%", String.valueOf(intMaxHealth)).replaceAll("%DOUBLE_MAX_HEALTH%", String.format("%.2f", doubleMaxHealth)).replaceAll("%INT_HEALTH%", String.valueOf(intHealth)).replaceAll("%DOUBLE_HEALTH%", String.format("%.2f", doubleHealth)).replaceAll("%CRIT%", crit).replaceAll("%DISTANCE%", String.valueOf(Math.round(distance*100.0)/100.0)))));
+            } else {
+                damager.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Utils.chat(plugin.getConfig().getString("pvpbarMessage").replaceAll("%DAMAGER_NAME%", damagerName).replaceAll("%TARGET_NAME%", targetName).replaceAll("%INT_DAMAGE%", String.valueOf(intDamage)).replaceAll("%DOUBLE_DAMAGE%", String.format("%.2f", doubleDamage)).replaceAll("%INT_MAX_HEALTH%", String.valueOf(intMaxHealth)).replaceAll("%DOUBLE_MAX_HEALTH%", String.format("%.2f", doubleMaxHealth)).replaceAll("%INT_HEALTH%", String.valueOf(intHealth)).replaceAll("%DOUBLE_HEALTH%", String.format("%.2f", doubleHealth)).replaceAll("%CRIT%", crit))));
+            }
 
         }
     }

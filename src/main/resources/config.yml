@@ -1,9 +1,12 @@
 # Welcome into the configuration file of the FightBar plugin !
 
-# Config version : 1
+# Config version : 2
 
 # Here is the message in the action bar
 pvpbarMessage: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUBLE_DAMAGE%%CRIT%&1⚔&r)"
+
+# Same has pvpbarMessage but with the Bow / Crossbow
+pvpbarMessageProjectile: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUBLE_DAMAGE%%CRIT%&1🏹&r &e- &a%DISTANCE%m&f)"
 
 # The list of placeholder:
 #%DAMAGER_NAME% : The attacker's name
@@ -19,6 +22,8 @@ pvpbarMessage: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUB
 #%DOUBLE_MAX_HEALTH% : Max health of the target format to double (Ex : 20.00)
 
 #%CRIT% : Critical hit if done
+
+#%DISTANCE% : Distance of the shoot (Only with pvpbarMessageBow)
 
 # If you want to implement the critical placeholder, you can change the symbole here
 critSymbole: "&r*"
