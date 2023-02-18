@@ -19,9 +19,9 @@ public class FightBarCommand implements CommandExecutor {
         if (args.length == 0) {
             (new UpdateChecker(plugin, 93909)).getVersion((version) -> {
                 if (plugin.getDescription().getVersion().equalsIgnoreCase(version)) {
-                    sender.sendMessage(Utils.chat("\n&7&m------------------ &c&lFight&6&lBar&7&m------------------&r\n \n&eYour version&r : &f&l" + plugin.getDescription().getVersion() + "&a☑&r\n" + "&eAuthor&r : &9&lYtrap\n" + "&ePlugin&r : &6&lhttps://www.spigotmc.org/resources/fightbar.93909/\n \n" + "&r&7&m---------------------------------------------" + "&r\n "));
+                    sender.sendMessage(Utils.chat("\n&7&m------------------- &c&lFight&6&lBar&7&m-------------------&r\n \n&eYour version&r : &f&l" + plugin.getDescription().getVersion() + "&a☑&r\n" + "&eAuthor&r : &9&lYtrap\n" + "&ePlugin&r : &6&lhttps://www.spigotmc.org/resources/fightbar.93909/\n \n" + "&r&7&m---------------------------------------------" + "&r\n "));
                 } else {
-                    sender.sendMessage(Utils.chat("\n&7&m------------------ &c&lFight&6&lBar&7&m------------------&r\n \n&eYour version&r : &f&l" + plugin.getDescription().getVersion() + " &c☒ &aThere is a new update available : &r" + version + " \n" + "&eAuthor&r : &9&lYtrap\n" + "&ePlugin&r : &6&lhttps://www.spigotmc.org/resources/fightbar.93909/\n \n" + "&r&7&m---------------------------------------------" + "&r\n "));
+                    sender.sendMessage(Utils.chat("\n&7&m------------------- &c&lFight&6&lBar&7&m-------------------&r\n \n&eYour version&r : &f&l" + plugin.getDescription().getVersion() + " &c☒ &aThere is a new update available : &r" + version + " \n" + "&eAuthor&r : &9&lYtrap\n" + "&ePlugin&r : &6&lhttps://www.spigotmc.org/resources/fightbar.93909/\n \n" + "&r&7&m---------------------------------------------" + "&r\n "));
                 }
 
             });
