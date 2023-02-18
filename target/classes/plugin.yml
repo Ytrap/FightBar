@@ -1,5 +1,5 @@
 name: 'FightBar'
-version: '3.2.0'
+version: '3.3.0'
 author: 'Ytrap'
 api-version: '1.19'
 main: io.github.ytrap.fightbar.Main

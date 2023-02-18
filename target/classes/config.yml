@@ -1,14 +1,14 @@
 # Welcome into the configuration file of the FightBar plugin !
 
-# Config version : 2
+# Config version : 3
 
 # Here is the message in the action bar
 pvpbarMessage: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUBLE_DAMAGE%%CRIT%&1⚔&r)"
 
-# Same has pvpbarMessage but with the Bow / Crossbow
+# Same has pvpbarMessage but with projectiles
 pvpbarMessageProjectile: "&c%DOUBLE_HEALTH%/&c&l%DOUBLE_MAX_HEALTH% &4&l❤ &e- &r(&9%DOUBLE_DAMAGE%%CRIT%&1🏹&r &e- &a%DISTANCE%m&f)"
 
-# The list of placeholder:
+# Placeholder list:
 #%DAMAGER_NAME% : The attacker's name
 #%TARGET_NAME% : The target's name
 
@@ -32,7 +32,7 @@ critSymbole: "&r*"
 enableOn: ALL
 
 disabledWorlds:
-  - worldToDisable
+#  - world
 
 disabledEntities:
 #  - Skeleton
